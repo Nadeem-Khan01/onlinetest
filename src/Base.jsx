@@ -43,15 +43,11 @@ const Base = () => {
      
     }
   }
-
-
-
   
   return (
     <>
-      <div className="top" style={{ color: "red", backgroundColor: "lightblue", textAlign: "center" }}>
-        <h1>Quize in given below....Note:[try to attempt quize in given time]</h1>
-      </div>
+     
+
       <h3 className="Toptime">Current Time:{time}</h3>
       <h3 className="Topcount">Counter:You have total 10min where {count} is remaining.....</h3>
       <h3>{conf}</h3>
@@ -72,10 +68,29 @@ const Base = () => {
           <NavLink exact to={"/end"} ><button id="btnclick" style={{display: "none"}}>click</button></NavLink>:
           null
       }
+     </>
+       )
+} 
+
+const Qus3= ()=>{
+  return(
+      <>
+     <h1>this is question 3</h1>
+     <p>1. The word which means "house" is:</p><br />
+         <input type="radio" name="1.The word which means house is" value="maison" />maison <br />
+         <input type="radio" name="1.The word which means house is" value="quatre" />quatre<br/>
+         <input type="radio" name="1.The word which means house is" value="soleil" />soleil<br />
+         <input type="radio" name="1.The word which means house is" value="poisson" />poisson<br />
+     <NavLink to={"/end"}>
+         <button
+       style={{ textAlign: "center", marginTop: "30px", backgroundColor: "green", padding: "5px 15px 5px 15px", border: "none", borderRadius: "4px", fontWeight: "6", fontSize: "19px" }}
+       className="btn btn-primary mt-2"
       
-
-    </>
-
+     >Submit</button>
+   </NavLink>
+   </>
   )
 }
+  
 export default Base;
+export {Qus3};
